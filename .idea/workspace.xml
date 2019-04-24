@@ -2,12 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="29095a66-654a-469b-a7be-0d83cf524c91" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/bmapi.iml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/example/javascript/app.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/acorn" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/acorn.cmd" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/.bin/acorn.ps1" afterDir="false" />
@@ -12056,9 +12058,9 @@
       <change afterPath="$PROJECT_DIR$/node_modules/yargs/package.json" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/node_modules/yargs/yargs.js" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/app.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/example/typescript/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/example/typescript/app.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/app.ts" beforeDir="false" afterPath="$PROJECT_DIR$/example/typescript/app.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/bmapi.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/bmapi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/client/bmapi.client.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/client/bmapi.client.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/error_messages/ErrorMessages.js" beforeDir="false" afterPath="$PROJECT_DIR$/lib/error_messages/ErrorMessages.js" afterDir="false" />
@@ -12095,6 +12097,15 @@
           </provider>
         </entry>
       </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/webpack.config.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -12113,7 +12124,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
@@ -12158,15 +12169,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/resources/Aggregations.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -12198,6 +12200,7 @@
         <option value="$PROJECT_DIR$/example/typescript/app.ts" />
         <option value="$PROJECT_DIR$/example/javascript/app.js" />
         <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -12221,6 +12224,11 @@
             <path>
               <item name="bmapi" type="b2602c69:ProjectViewProjectNode" />
               <item name="bmapi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="bmapi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bmapi" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -12267,12 +12275,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1556092545894</updated>
-      <workItem from="1556092547725" duration="1650000" />
+      <workItem from="1556092547725" duration="1744000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1650000" />
+    <option name="totallyTimeSpent" value="1744000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-6" y="24" width="1549" height="846" extended-state="6" />
@@ -12362,13 +12370,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/example/javascript/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/webpack.config.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
@@ -12387,6 +12388,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="26" lean-forward="true" selection-start-line="4" selection-start-column="26" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/example/javascript/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="42" lean-forward="true" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="7" selection-start-line="8" selection-start-column="7" selection-end-line="8" selection-end-column="7" />
         </state>
       </provider>
     </entry>
