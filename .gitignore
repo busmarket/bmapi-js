@@ -1,0 +1,9 @@
+.idea/
+*.crt
+*.pem
+*.log
+*.lock
+/*.crt
+/*.pem
+/*.log
+/*.lock

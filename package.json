@@ -2,7 +2,7 @@
   "name": "bmapi",
   "version": "1.0.0",
   "description": "BmAPI | BusMarket API JS client",
-  "main": "lib/bmapi.js",
+  "main": "dist/bmapi.js",
   "types": "@types/bmapi.d.ts",
   "author": "Andrew Rymaruk",
   "license": "MIT",
@@ -22,7 +22,6 @@
   "devDependencies": {
     "@babel/core": "^7.4.3",
     "@babel/preset-env": "^7.4.3",
-    "@types/node": "^11.13.7",
     "@types/webrtc": "^0.0.25",
     "babel-loader": "^8.0.5",
     "babel-plugin-transform-class-properties": "^6.24.1",
