@@ -13,9 +13,7 @@ check out the [API documentation](https://developer.bm.parts/).
 
 ### Installation
 
-```
-npm install bmapi --save
-```
+~~npm install bmapi --save~~
 
 ### Overview
 
