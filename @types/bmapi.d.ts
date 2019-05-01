@@ -1,12 +1,12 @@
 /**
  * BmAPI JS Client v 1.0.0
  * Author: BusMarket Group
- *
  * Site: https://busmarket.group
- *
+ * *******************************************
  * For a comprehensive list of examples,
- * check out the our documentation:
- * https://developer.bm.parts/api/v2/
+ * check out the our documentation.
+ * Site: https://developer.bm.parts/api/v2/
+ * *******************************************
  */
 declare var BmApi: (apiToken: string) => BmApiResources;
 
@@ -45,9 +45,7 @@ declare interface BmApiProductMethods {
 /***
  * Search products in the catalog.
  *
- * Full documentation about
- * `https://api.bm.parts/SEARCH/PRODUCTS`
- * you can read by link:
+ * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html?highlight=search%20products#get-search-products
  */
 declare interface BmApiQueryProducts {
@@ -68,9 +66,7 @@ declare interface BmApiQueryProducts {
 /***
  * Search for products in the catalog through suggests
  *
- * Full documentation about
- * `https://api.bm.parts/SEARCH/SUGGESTS`
- * you can read by link:
+ * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html?highlight=search#get-search-suggests
  */
 declare interface BmApiQuerySuggests {
@@ -88,7 +84,7 @@ declare interface BmApiQueryModelEngines {
 /***
  * Get PRODUCT by Query Parameters
  *
- * Full documentation you can read by link:
+ * Full documentation:
  * https://developer.bm.parts/api/v2/product.html
  */
 declare interface BmApiQueryProductInWaiting {
@@ -114,8 +110,7 @@ declare interface BmApiQueryProductDetails {
 }
 
 /**
- * Full documentation about `https://api.bm.parts/SEARCH/<name>`
- * you can read by link:
+ * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
  */
 declare interface BmApiResources {
@@ -125,7 +120,7 @@ declare interface BmApiResources {
 }
 
 /***
- * Declaring the global module *** BmApi ***
+ * Declaring the global module *** BM API ***
  */
 declare module "bmapi" {
   export = BmApi
