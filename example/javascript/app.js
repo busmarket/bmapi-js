@@ -1,6 +1,6 @@
-const BmApi = require('../../dist/bmapi');
-const myBmApi = new BmApi('<your_token>');
-(async() => {
-  const response = await myBmApi.search.products({q: '115906'});
-  console.info(response);
+const BmApi = require('../../lib/bmapi');
+const myBmApi = new BmApi('[authorization_token]');
+(async () => {
+  const response = await myBmApi.product.details({product_uuid: `97A05EE1CD6E19884724E5B05B015344`});
+  console.info(response.data);
 })();

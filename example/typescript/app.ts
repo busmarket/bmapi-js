@@ -9,7 +9,7 @@ const myBmApi = BmApi(`${Authorization}`);
    * Get PRODUCT
    * @type {BmApiResponse}
    */
-  const search = await myBmApi.search.products({q: '115906'});
+  const search = await myBmApi.product.details({});
   console.info(search.data.products);
 
   /**

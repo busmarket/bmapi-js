@@ -34,6 +34,13 @@ declare interface BmApiAggregationsMethods {
   engines(params?: BmApiQueryModelEngines): Promise<BmApiResponse>;
   history(): Promise<BmApiResponse>;
 }
+declare interface BmApiProductMethods {
+  in_waiting(params?: BmApiQueryProductInWaiting): Promise<BmApiResponse>;
+  in_stocks(params?: BmApiQueryProductInStocks): Promise<BmApiResponse>;
+  prices(params?: BmApiQueryProductPrices): Promise<BmApiResponse>;
+  price(params?: BmApiQueryProductPrice): Promise<BmApiResponse>;
+  details(params?: BmApiQueryProductDetails): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -78,6 +85,34 @@ declare interface BmApiQueryModelEngines {
   model_name: string;
 }
 
+/***
+ * Get PRODUCT by Query Parameters
+ *
+ * Full documentation you can read by link:
+ * https://developer.bm.parts/api/v2/product.html
+ */
+declare interface BmApiQueryProductInWaiting {
+  product_uuid: string; // ID products
+}
+declare interface BmApiQueryProductInStocks {
+  product_uuid: string; // ID products
+  id_type?: string; // Product search by ID or by code
+}
+declare interface BmApiQueryProductPrices {
+  product_uuid: string; // ID products
+  id_type?: string; // Product search by ID or by code
+}
+declare interface BmApiQueryProductPrice {
+  product_uuid: string; // ID products
+  id_type?: string; // Product search by ID or by code
+  currency?: string; // ID currency
+}
+declare interface BmApiQueryProductDetails {
+  product_uuid: string; // ID products
+  id_type?: string; // Product search by ID or by code
+  currency?: string; // ID currency
+}
+
 /**
  * Full documentation about `https://api.bm.parts/SEARCH/<name>`
  * you can read by link:
@@ -86,6 +121,7 @@ declare interface BmApiQueryModelEngines {
 declare interface BmApiResources {
   search: BmApiSearchMethods;
   aggregations: BmApiAggregationsMethods;
+  product: BmApiProductMethods;
 }
 
 /***
