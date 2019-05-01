@@ -35,11 +35,11 @@ const myBmApi = BmApi('<your_token>');
 
 ### Engine
 
-* search
+* [search](https://developer.bm.parts/api/v2/search_products.html)
   * `products({params})`
   * `suggests({params})`
   
-* aggregations
+* [aggregations](https://developer.bm.parts/api/v2/search_products.html)
   * `advertisements({params})`
   * `brands({params})`
   * `nodes({params})`
@@ -48,7 +48,7 @@ const myBmApi = BmApi('<your_token>');
   * `engines({params})`
   * `history()`
 
-* product
+* [product](https://developer.bm.parts/api/v2/product.html)
   * `in_waiting({params})`
   * `in_stocks({params})`
   * `prices({params})`
