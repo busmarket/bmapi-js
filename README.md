@@ -8,7 +8,7 @@
 BusMarket API JS client.
 ```
 For a comprehensive list of examples, 
-check out the [API documentation](https://develper.busmarket.ua/).
+check out the [API documentation](https://developer.bm.parts/).
 
 
 ### Installation
