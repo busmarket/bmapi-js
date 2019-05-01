@@ -48,6 +48,12 @@ const myBmApi = BmApi('<your_token>');
   * `engines({params})`
   * `history()`
 
+* product
+  * `in_waiting({params})`
+  * `in_stocks({params})`
+  * `prices({params})`
+  * `price({params})`
+  * `details({params})`
 
 Every resource method returns a promise.
 For example, let's get list of products:
