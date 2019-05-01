@@ -4,8 +4,8 @@
 
 
 ```
-⚠ This is a DEMO version of the library 
-BusMarket API JS client.
+⚠ UNDER CONSTRUCTION ⚠
+This is a short version of the library BusMarket API JS client.
 ```
 For a comprehensive list of examples, 
 check out the [API documentation](https://developer.bm.parts/).
