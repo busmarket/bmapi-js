@@ -47,11 +47,21 @@ const myBmApi = BmApi('<your_token>');
   * `history()`
 
 * [product](https://developer.bm.parts/api/v2/product.html)
-  * `in_waiting({params})`
-  * `in_stocks({params})`
+  * `inWaiting({params})`
+  * `inStocks({params})`
   * `prices({params})`
   * `price({params})`
   * `details({params})`
+
+* [profile](https://developer.bm.parts/api/v2/profile.html)
+  * `history({params})`
+  * `me({params})`
+  * `changeWarehouse({params})`
+  * `mailingGet({params})`
+  * `mailingSave({params})`
+  * `settingsGet({params})`
+  * `settingsSave({params})`
+  * `settingsDelete({params})`
 
 Every resource method returns a promise.
 For example, let's get list of products:
