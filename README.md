@@ -61,7 +61,7 @@ const BmApi = require('bmapi');
 const myBmApi = new BmApi('<your_token>');
 (async() => {
   const response = await myBmApi.search.products({q: '115906'});
-  console.info(response);
+  console.info(response.data || response);
 })();
 ```
 
