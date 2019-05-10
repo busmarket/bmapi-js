@@ -3,5 +3,5 @@ const myBmApi = new BmApi('eyJhbGciOiJIUzI1NiIsImlhdCI6MTU1NzMyODQyNiwiZXhwIjoxN
 
 (async () => {
   const response = await myBmApi.profile.settingsCreate({app_name: 'test1', settings: '{"name": "text"}'});
-  console.info(response.data || response);
+  console.info(response.data);
 })();
