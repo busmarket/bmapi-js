@@ -35,11 +35,22 @@ declare interface BmApiAggregationsMethods {
   history(): Promise<BmApiResponse>;
 }
 declare interface BmApiProductMethods {
-  in_waiting(params?: BmApiQueryProductInWaiting): Promise<BmApiResponse>;
-  in_stocks(params?: BmApiQueryProductInStocks): Promise<BmApiResponse>;
+  inWaiting(params?: BmApiQueryProductInWaiting): Promise<BmApiResponse>;
+  inStocks(params?: BmApiQueryProductInStocks): Promise<BmApiResponse>;
   prices(params?: BmApiQueryProductPrices): Promise<BmApiResponse>;
   price(params?: BmApiQueryProductPrice): Promise<BmApiResponse>;
   details(params?: BmApiQueryProductDetails): Promise<BmApiResponse>;
+}
+declare interface BmApiProfileMethods {
+  changeWarehouse(params: BmApiQueryProfileChangeWarehouse): Promise<BmApiResponse>;
+  mailingGet(): Promise<BmApiResponse>;
+  mailingSave(params: object): Promise<BmApiResponse>;
+  history(params?: BmApiQueryProfileHistory): Promise<BmApiResponse>;
+  me(): Promise<BmApiResponse>;
+  settingsGet(params: BmApiQueryProfileSettings): Promise<BmApiResponse>;
+  settingsSave(params: BmApiQueryProfileSettingsSaveCreate): Promise<BmApiResponse>;
+  settingsCreate(params: BmApiQueryProfileSettingsSaveCreate): Promise<BmApiResponse>;
+  settingsDelete(params: BmApiQueryProfileSettings): Promise<BmApiResponse>;
 }
 
 /***
@@ -109,6 +120,44 @@ declare interface BmApiQueryProductDetails {
   currency?: string; // ID currency
 }
 
+/***
+ * Get change main warehouse
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/profile.html#post--profile-change_warehouse
+ */
+declare interface BmApiQueryProfileChangeWarehouse {
+  warehouse_uuid: string; // ID warehouse
+}
+
+/***
+ * Get PROFILE HISTORY by Query Parameters
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/profile.html#get-profile-history
+ */
+declare interface BmApiQueryProfileHistory {
+  filter: string; // vin, phrase or all
+  direction: string; // asc or desc
+  per_page: string; // default 30 (max 100)
+  page: string; // number page
+}
+
+/***
+ * Get client application settings
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/profile.html#get--profile-me
+ */
+declare interface BmApiQueryProfileSettings {
+  app_name: string;
+}
+declare interface BmApiQueryProfileSettingsSaveCreate {
+  app_name: string;
+  version?: string;
+  settings: string;
+}
+
 /**
  * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
@@ -117,6 +166,7 @@ declare interface BmApiResources {
   search: BmApiSearchMethods;
   aggregations: BmApiAggregationsMethods;
   product: BmApiProductMethods;
+  profile: BmApiProfileMethods;
 }
 
 /***
