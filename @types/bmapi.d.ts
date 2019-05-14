@@ -43,14 +43,21 @@ declare interface BmApiProductMethods {
 }
 declare interface BmApiProfileMethods {
   changeWarehouse(params: BmApiQueryProfileChangeWarehouse): Promise<BmApiResponse>;
-  mailingGet(): Promise<BmApiResponse>;
-  mailingSave(params: object): Promise<BmApiResponse>;
+  getMailing(): Promise<BmApiResponse>;
+  saveMailing(params: object): Promise<BmApiResponse>;
   history(params?: BmApiQueryProfileHistory): Promise<BmApiResponse>;
   me(): Promise<BmApiResponse>;
   settingsGet(params: BmApiQueryProfileSettings): Promise<BmApiResponse>;
   settingsSave(params: BmApiQueryProfileSettingsSaveCreate): Promise<BmApiResponse>;
   settingsCreate(params: BmApiQueryProfileSettingsSaveCreate): Promise<BmApiResponse>;
   settingsDelete(params: BmApiQueryProfileSettings): Promise<BmApiResponse>;
+}
+declare interface BmApiClaimsMethods {
+  types(): Promise<BmApiResponse>;
+  getIssues(): Promise<BmApiResponse>;
+  setIssues(params: BmApiQueryClaimsSet): Promise<BmApiResponse>;
+  attachments(params: BmApiQueryClaimsAttachments): Promise<BmApiResponse>;
+  attachment(params: BmApiQueryClaimsAttachment): Promise<BmApiResponse>;
 }
 
 /***
@@ -158,11 +165,32 @@ declare interface BmApiQueryProfileSettingsSaveCreate {
   settings: string;
 }
 
+/***
+ * Claims
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/claims.html#
+ */
+declare interface BmApiQueryClaimsSet {
+  summary: string;
+  description: string;
+  issue_type: string;
+}
+declare interface BmApiQueryClaimsAttachments {
+  issue_id: string;
+}
+declare interface BmApiQueryClaimsAttachment {
+  attach_id: string;
+  attach_name: string;
+  issue_id: string;
+}
+
 /**
  * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
  */
 declare interface BmApiResources {
+  claims: BmApiClaimsMethods;
   search: BmApiSearchMethods;
   aggregations: BmApiAggregationsMethods;
   product: BmApiProductMethods;
