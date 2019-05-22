@@ -58,6 +58,8 @@ declare interface BmApiClaimsMethods {
   setIssues(params: BmApiQueryClaimsSet): Promise<BmApiResponse>;
   attachments(params: BmApiQueryClaimsAttachments): Promise<BmApiResponse>;
   attachment(params: BmApiQueryClaimsAttachment): Promise<BmApiResponse>;
+  getIssueComments(params: BmApiQueryClaimsGetIssueComments): Promise<BmApiResponse>;
+  setIssueComments(params: BmApiQueryClaimsSetIssueComments): Promise<BmApiResponse>;
 }
 
 /***
@@ -180,9 +182,15 @@ declare interface BmApiQueryClaimsAttachments {
   issue_id: string;
 }
 declare interface BmApiQueryClaimsAttachment {
-  attach_id: string;
-  attach_name: string;
   issue_id: string;
+  attachment: FormData;
+}
+declare interface BmApiQueryClaimsGetIssueComments {
+  issue_id: string;
+}
+declare interface BmApiQueryClaimsSetIssueComments {
+  issue_id: string;
+  comment: string;
 }
 
 /**

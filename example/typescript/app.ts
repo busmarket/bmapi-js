@@ -23,7 +23,7 @@ const myBmApi = BmApi(`${Authorization}`);
    * Get SUGGESTS
    * @type {BmApiResponse}
    */
-  const suggests = await myBmApi.profile.change_warehouse({warehouse_uuid: '1111'})
+  // const suggests = await myBmApi.profile.change_warehouse({warehouse_uuid: '1111'})
   // console.info(suggests.data);
 
 })();
