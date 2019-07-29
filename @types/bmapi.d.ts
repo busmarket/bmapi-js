@@ -61,6 +61,10 @@ declare interface BmApiClaimsMethods {
   getIssueComments(params: BmApiQueryClaimsGetIssueComments): Promise<BmApiResponse>;
   setIssueComments(params: BmApiQueryClaimsSetIssueComments): Promise<BmApiResponse>;
 }
+declare interface BmApiNewsMethods {
+  list(params: BmApiQueryNewsList): Promise<BmApiResponse>;
+  article(params: BmApiQueryNewsArticle): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -193,6 +197,20 @@ declare interface BmApiQueryClaimsSetIssueComments {
   comment: string;
 }
 
+/***
+ * News
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/news.html
+ */
+declare interface BmApiQueryNewsArticle {
+    news_uuid: string;
+}
+declare interface BmApiQueryNewsList {
+    page?: number;
+    per_page?: number;
+}
+
 /**
  * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
@@ -203,6 +221,7 @@ declare interface BmApiResources {
   aggregations: BmApiAggregationsMethods;
   product: BmApiProductMethods;
   profile: BmApiProfileMethods;
+  news: BmApiNewsMethods;
 }
 
 /***
