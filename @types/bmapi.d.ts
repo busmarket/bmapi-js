@@ -65,6 +65,13 @@ declare interface BmApiNewsMethods {
   list(params: BmApiQueryNewsList): Promise<BmApiResponse>;
   article(params: BmApiQueryNewsArticle): Promise<BmApiResponse>;
 }
+declare interface BmApiAdvertisingMethods {
+  bannerRandom(params: BmApiQueryAdvertisingBannerRandomList): Promise<BmApiResponse>;
+  bannersList(params: BmApiQueryAdvertisingBannersList): Promise<BmApiResponse>;
+  list(params: BmApiQueryAdvertisingList): Promise<BmApiResponse>;
+  progress(params: BmApiQueryAdvertisingProgress): Promise<BmApiResponse>;
+  promo(params: BmApiQueryAdvertisingPromo): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -204,11 +211,41 @@ declare interface BmApiQueryClaimsSetIssueComments {
  * https://developer.bm.parts/api/v2/news.html
  */
 declare interface BmApiQueryNewsArticle {
-    news_uuid: string;
+  news_uuid: string;
 }
 declare interface BmApiQueryNewsList {
-    page?: number;
-    per_page?: number;
+  page?: number;
+  per_page?: number;
+}
+
+/***
+ * Advertising
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/advertising.html
+ */
+declare interface BmApiQueryAdvertisingBannerRandomList {
+  banner_code?: string;
+  advert?: string;
+}
+declare interface BmApiQueryAdvertisingBannersList {
+  banner_code?: string;
+  advert?: string;
+}
+declare interface BmApiQueryAdvertisingList {
+  banner_code?: string;
+  promo?: string;
+  public?: boolean;
+  filter?: string; // current | archived | all
+  page?: number;
+  per_page?: number
+}
+declare interface BmApiQueryAdvertisingProgress {
+  promo_uuid: string;
+}
+declare interface BmApiQueryAdvertisingPromo {
+  promo_uuid: string;
+  public?: boolean
 }
 
 /**
@@ -222,6 +259,7 @@ declare interface BmApiResources {
   product: BmApiProductMethods;
   profile: BmApiProfileMethods;
   news: BmApiNewsMethods;
+  advertising: BmApiAdvertisingMethods
 }
 
 /***
