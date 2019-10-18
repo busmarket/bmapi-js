@@ -7,6 +7,10 @@ const myBmApi = new BmApi('eyJhbGciOiJIUzI1NiIsImlhdCI6MTU2NDM5MTg3MSwiZXhwIjoxN
   // const response = await myBmApi.claims.setIssueComment({issue_id: 'CLAIMS-516', comment: 'test from js client'});
   // const response = await myBmApi.claims.getIssueComments({issue_id: 'CLAIMS-516'});
   // const response = await myBmApi.news.article({news_uuid: '81E2005056AC66D611E9B1DA94D7198D'});
-  const response = await myBmApi.advertising.promo({promo_uuid: '81E2005056AC66D611E9AD1B130C1034'});
+  // const response = await myBmApi.advertising.promo({promo_uuid: '81E2005056AC66D611E9AD1B130C1034'});
+  const response = await myBmApi.reports.reconciliationFile({
+    period: 'month',
+    file_type: 'pdf'
+  });
   console.info( response.data );
 })();
