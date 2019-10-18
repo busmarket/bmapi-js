@@ -72,6 +72,12 @@ declare interface BmApiAdvertisingMethods {
   progress(params: BmApiQueryAdvertisingProgress): Promise<BmApiResponse>;
   promo(params: BmApiQueryAdvertisingPromo): Promise<BmApiResponse>;
 }
+declare interface BmApiReportsMethods {
+  brandsTurnover(params: BmApiQueryReportsBrandsTurnover): Promise<BmApiResponse>;
+  reconciliation(params: BmApiQueryReportsReconciliation): Promise<BmApiResponse>;
+  terms(params: BmApiQueryReportsTerms): Promise<BmApiResponse>;
+  reconciliationFile(params: BmApiQueryReportsReconciliationFile): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -219,6 +225,26 @@ declare interface BmApiQueryNewsList {
 }
 
 /***
+ * Reports
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/reports.html
+ */
+declare interface BmApiQueryReportsBrandsTurnover {
+  period: string;
+}
+declare interface BmApiQueryReportsReconciliation {
+  period: string;
+}
+declare interface BmApiQueryReportsTerms {
+  at_date: any;
+}
+declare interface BmApiQueryReportsReconciliationFile {
+  period: string;
+  file_type: string;
+}
+
+/***
  * Advertising
  *
  * Full documentation:
@@ -259,7 +285,8 @@ declare interface BmApiResources {
   product: BmApiProductMethods;
   profile: BmApiProfileMethods;
   news: BmApiNewsMethods;
-  advertising: BmApiAdvertisingMethods
+  advertising: BmApiAdvertisingMethods,
+  reports: BmApiReportsMethods
 }
 
 /***

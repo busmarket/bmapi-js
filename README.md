@@ -32,45 +32,6 @@ const myBmApi = BmApi('<your_token>');
 ```
 
 ### Engine
-
-* [search](https://developer.bm.parts/api/v2/search_products.html)
-  * `products({params})`
-  * `suggests({params})`
-  
-* [aggregations](https://developer.bm.parts/api/v2/search_products.html)
-  * `advertisements({params})`
-  * `brands({params})`
-  * `nodes({params})`
-  * `cars({params})`
-  * `models({params})`
-  * `engines({params})`
-  * `history()`
-
-* [product](https://developer.bm.parts/api/v2/product.html)
-  * `inWaiting({params})`
-  * `inStocks({params})`
-  * `prices({params})`
-  * `price({params})`
-  * `details({params})`
-
-* [profile](https://developer.bm.parts/api/v2/profile.html)
-  * `history({params})`
-  * `me({params})`
-  * `changeWarehouse({params})`
-  * `getMailing({params})`
-  * `saveMailing({params})`
-  * `settingsGet({params})`
-  * `settingsSave({params})`
-  * `settingsDelete({params})`
-
-* [claims](https://developer.bm.parts/api/v2/claims.html)
-  * `types()`
-  * `issues()`
-  * `getIssues()`
-  * `setIssues({params})`
-  * `attachments({params})`
-  * `attachment({params})`
-  
 Every resource method returns a promise.
 For example, let's get list of products:
 
