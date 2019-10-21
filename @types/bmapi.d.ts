@@ -82,6 +82,15 @@ declare interface BmApiCatalogMethods {
   newArrivals(): Promise<BmApiResponse>;
   brands(params: BmApiQueryCatalogBrandsList): Promise<BmApiResponse>;
 }
+declare interface BmApiDocumentsMethods {
+  filterTypes(): Promise<BmApiResponse>;
+  filterDates(): Promise<BmApiResponse>;
+  filterGrouped(params: BmApiQueryDocumentsFilterGrouped): Promise<BmApiResponse>;
+  list(params: BmApiQueryDocumentsList): Promise<BmApiResponse>;
+  reclamationStatus(params: BmApiQueryDocumentsReclamationStatus): Promise<BmApiResponse>;
+  getDocument(params: BmApiQueryDocument): Promise<BmApiResponse>;
+  downloadDocument(params: BmApiQueryDocumentsDownload): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -289,6 +298,39 @@ declare interface BmApiQueryAdvertisingPromo {
   public?: boolean
 }
 
+/***
+ * Documents
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/documents.html
+ */
+declare interface BmApiQueryDocumentsFilterGrouped {
+  direction?: string;
+  period?: string;
+  type?: string;
+  q?: string;
+}
+declare interface BmApiQueryDocumentsList {
+  direction?: string;
+  period?: string;
+  type?: string;
+  q?: string;
+  page?: number;
+  per_page?: number;
+}
+declare interface BmApiQueryDocumentsReclamationStatus {
+  act_uuid: string
+}
+declare interface BmApiQueryDocument {
+  uuid: string
+  type: string
+}
+declare interface BmApiQueryDocumentsDownload {
+  uuid: string
+  type: string
+  file_type: string
+}
+
 /**
  * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
@@ -302,7 +344,8 @@ declare interface BmApiResources {
   news: BmApiNewsMethods;
   advertising: BmApiAdvertisingMethods,
   reports: BmApiReportsMethods,
-  catalog: BmApiCatalogMethods
+  catalog: BmApiCatalogMethods,
+  documents: BmApiDocumentsMethods
 }
 
 /***
