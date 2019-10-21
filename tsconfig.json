@@ -11,7 +11,7 @@
   "typeRoots": ["./node_modules/@types", "./@types"],
   "files": [
     "@types/bmapi.d.ts",
-    "example/app.ts"
+    "example/typescript/app.ts"
   ],
   "exclude": [
     "node_modules",

@@ -78,6 +78,10 @@ declare interface BmApiReportsMethods {
   terms(params: BmApiQueryReportsTerms): Promise<BmApiResponse>;
   reconciliationFile(params: BmApiQueryReportsReconciliationFile): Promise<BmApiResponse>;
 }
+declare interface BmApiCatalogMethods {
+  newArrivals(): Promise<BmApiResponse>;
+  brands(params: BmApiQueryCatalogBrandsList): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -225,6 +229,17 @@ declare interface BmApiQueryNewsList {
 }
 
 /***
+ * News
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/catalog.html
+ */
+declare interface BmApiQueryCatalogBrandsList {
+  page?: number;
+  per_page?: number;
+}
+
+/***
  * Reports
  *
  * Full documentation:
@@ -286,7 +301,8 @@ declare interface BmApiResources {
   profile: BmApiProfileMethods;
   news: BmApiNewsMethods;
   advertising: BmApiAdvertisingMethods,
-  reports: BmApiReportsMethods
+  reports: BmApiReportsMethods,
+  catalog: BmApiCatalogMethods
 }
 
 /***
