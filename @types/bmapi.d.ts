@@ -98,6 +98,10 @@ declare interface BmApiFinanceMethods {
   contractsList(): Promise<BmApiResponse>;
   contracts(params: BmApiQueryFinanceContract): Promise<BmApiResponse>;
 }
+declare interface BmApiDeliveryMethods {
+  carriersWarehouses(params: BmApiQueryDeliveryContract): Promise<BmApiResponse>;
+  carriersCities(params: BmApiQueryDeliveryCities): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -348,6 +352,22 @@ declare interface BmApiQueryFinanceContract {
   contract_uuid: string
 }
 
+/***
+ * Delivery
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/delivery.html
+ */
+declare interface BmApiQueryDeliveryContract {
+  city: string
+  carrier: string
+}
+declare interface BmApiQueryDeliveryCities {
+  region: string;
+  carrier: string;
+  is_address?: boolean;
+}
+
 /**
  * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
@@ -363,7 +383,8 @@ declare interface BmApiResources {
   reports: BmApiReportsMethods,
   catalog: BmApiCatalogMethods,
   documents: BmApiDocumentsMethods,
-  finance: BmApiFinanceMethods
+  finance: BmApiFinanceMethods,
+  delivery: BmApiDeliveryMethods
 }
 
 /***

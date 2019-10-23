@@ -12,6 +12,6 @@ const myBmApi = new BmApi('eyJhbGciOiJIUzI1NiIsImlhdCI6MTU2NDM5MTg3MSwiZXhwIjoxN
   //   period: 'month',
   //   file_type: 'pdf'
   // });
-  const response = await myBmApi.finance.contracts();
+  const response = await myBmApi.delivery.carriersCities();
   console.info( response.data );
 })();
