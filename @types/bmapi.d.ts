@@ -91,6 +91,13 @@ declare interface BmApiDocumentsMethods {
   getDocument(params: BmApiQueryDocument): Promise<BmApiResponse>;
   downloadDocument(params: BmApiQueryDocumentsDownload): Promise<BmApiResponse>;
 }
+declare interface BmApiFinanceMethods {
+  historyRates(): Promise<BmApiResponse>;
+  currenciesRates(): Promise<BmApiResponse>;
+  currenciesList(): Promise<BmApiResponse>;
+  contractsList(): Promise<BmApiResponse>;
+  contracts(params: BmApiQueryFinanceContract): Promise<BmApiResponse>;
+}
 
 /***
  * Search products in the catalog.
@@ -331,6 +338,16 @@ declare interface BmApiQueryDocumentsDownload {
   file_type: string
 }
 
+/***
+ * Finance
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/finance.html
+ */
+declare interface BmApiQueryFinanceContract {
+  contract_uuid: string
+}
+
 /**
  * Full documentation:
  * https://developer.bm.parts/api/v2/search_products.html
@@ -345,7 +362,8 @@ declare interface BmApiResources {
   advertising: BmApiAdvertisingMethods,
   reports: BmApiReportsMethods,
   catalog: BmApiCatalogMethods,
-  documents: BmApiDocumentsMethods
+  documents: BmApiDocumentsMethods,
+  finance: BmApiFinanceMethods
 }
 
 /***
