@@ -101,6 +101,12 @@ declare interface BmApiFinanceMethods {
 declare interface BmApiDeliveryMethods {
   carriersWarehouses(params: BmApiQueryDeliveryContract): Promise<BmApiResponse>;
   carriersCities(params: BmApiQueryDeliveryCities): Promise<BmApiResponse>;
+  cityStreets(params: BmApiQueryDeliveryStreets): Promise<BmApiResponse>;
+  configConfirm(params: BmApiQueryDeliveryConfirm): Promise<BmApiResponse>;
+  configDefault(params: BmApiQueryDeliveryConfirmDefault): Promise<BmApiResponse>;
+  deliveryDepartures(params: BmApiQueryDeliveryDepartures): Promise<BmApiResponse>;
+  deliveryReceiversAdd(params: BmApiQueryDeliveryReceiversAdd): Promise<BmApiResponse>;
+  deliveryReceivers(): Promise<BmApiResponse>;
 }
 
 /***
@@ -366,6 +372,26 @@ declare interface BmApiQueryDeliveryCities {
   region: string;
   carrier: string;
   is_address?: boolean;
+}
+declare interface BmApiQueryDeliveryStreets {
+  city: string;
+  street: string;
+}
+declare interface BmApiQueryDeliveryConfirm {
+  code: string;
+}
+declare interface BmApiQueryDeliveryConfirmDefault {
+  config_uuid: string;
+}
+declare interface BmApiQueryDeliveryDepartures {
+  warehouse: string;
+  city: string;
+}
+declare interface BmApiQueryDeliveryReceiversAdd {
+  surname: string;
+  name: string;
+  middle_name: string;
+  phone: string;
 }
 
 /**
