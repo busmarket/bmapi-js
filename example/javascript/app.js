@@ -12,6 +12,8 @@ const myBmApi = new BmApi('eyJhbGciOiJIUzI1NiIsImlhdCI6MTU2NDM5MTg3MSwiZXhwIjoxN
   //   period: 'month',
   //   file_type: 'pdf'
   // });
-  const response = await myBmApi.delivery.deliveryReceivers();
+  const response = await myBmApi.delivery.deliveryCarrier({
+    carrier_uuid: 'A38B158FEBD71FDF44901B05CFDE8A32'
+  });
   console.info( response.data );
 })();

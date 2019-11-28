@@ -106,7 +106,15 @@ declare interface BmApiDeliveryMethods {
   configDefault(params: BmApiQueryDeliveryConfirmDefault): Promise<BmApiResponse>;
   deliveryDepartures(params: BmApiQueryDeliveryDepartures): Promise<BmApiResponse>;
   deliveryReceiversAdd(params: BmApiQueryDeliveryReceiversAdd): Promise<BmApiResponse>;
-  deliveryReceivers(): Promise<BmApiResponse>;
+  deliveryReceivers(params: BmApiQueryDeliveryReceivers): Promise<BmApiResponse>;
+  deliveryCarriers(): Promise<BmApiResponse>;
+  deliveryRegions(): Promise<BmApiResponse>;
+  deliveryConfigs(): Promise<BmApiResponse>;
+  createDeliveryConfigs(): Promise<BmApiResponse>;
+  deliveryTrack(params: BmApiQueryDeliveryTrack): Promise<BmApiResponse>;
+  deliveryRegionCities(params: BmApiQueryDeliveryRegionCities): Promise<BmApiResponse>;
+  deliveryDeleteReceiver(params: BmApiQueryDeliveryDeleteReceiver): Promise<BmApiResponse>;
+  deliveryCarrier(params: BmApiQueryDeliveryCarrier): Promise<BmApiResponse>;
 }
 
 /***
@@ -392,6 +400,26 @@ declare interface BmApiQueryDeliveryReceiversAdd {
   name: string;
   middle_name: string;
   phone: string;
+}
+declare interface BmApiQueryDeliveryTrack{
+  tracking_number: string;
+}
+declare interface BmApiQueryDeliveryRegionCities{
+  region_uuid: string;
+  page?: string;
+  per_page?: string;
+  q?: string
+}
+declare interface BmApiQueryDeliveryReceivers{
+  page?: string;
+  per_page?: string;
+  q?: string
+}
+declare interface BmApiQueryDeliveryDeleteReceiver{
+  receiver_uuid: string
+}
+declare interface BmApiQueryDeliveryCarrier{
+  carrier_uuid: string
 }
 
 /**
