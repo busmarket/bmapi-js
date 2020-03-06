@@ -188,7 +188,6 @@ declare interface BmApiDeliveryMethods {
 }
 
 
-
 declare interface BmApiTrainingsMethods {
     getTrainingsList(params: BmApiQueryTrainingsList): Promise<BmApiResponse>
 
@@ -199,6 +198,16 @@ declare interface BmApiTrainingsMethods {
     trainingToCalendar(params: BmApiQueryTrainingToCalendar): Promise<BmApiResponse>
 
 
+}
+
+declare interface BmApiReturnsMethods {
+    returnsList(): Promise<BmApiResponse>
+
+    returnsCauses(): Promise<BmApiResponse>
+
+    returnsRequestCreate(params: BmApiQueryReturnsRequest): Promise<BmApiResponse>
+
+    returnsNotify(params: BmApiQueryReturnsNotify): Promise<BmApiResponse>
 }
 
 
@@ -540,9 +549,6 @@ declare interface BmApiQueryDeliveryCarrier {
     carrier_uuid: string
 }
 
-
-
-
 /**
  * Trainings
  *
@@ -571,6 +577,22 @@ declare interface BmApiQueryTrainingRegister {
     phone_number?: string
 }
 
+/**
+ * returns
+ *
+ * Full documentation:
+ * https://developer.bm.parts/api/v2/returns.html
+ */
+
+declare interface BmApiQueryReturnsRequest {
+    code: string;
+    cause_code: string;
+    count: string
+}
+declare interface BmApiQueryReturnsNotify {
+    query_text: string;
+}
+
 
 /**
  * Full documentation:
@@ -588,11 +610,14 @@ declare interface BmApiResources {
     reports: BmApiReportsMethods,
     advertising: BmApiAdvertisingMethods,
     product: BmApiProductMethods;
-
-
-
-    aggregations: BmApiAggregationsMethods;
     trainings: BmApiTrainingsMethods
+    aggregations: BmApiAggregationsMethods;
+    returns: BmApiReturnsMethods
+
+
+
+
+
 }
 
 
