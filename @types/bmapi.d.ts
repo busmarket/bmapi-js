@@ -158,17 +158,17 @@ declare interface BmApiDeliveryMethods {
 
     carriersCities(params: BmApiQueryDeliveryCities): Promise<BmApiResponse>;
 
-    cityStreets(params: BmApiQueryDeliveryStreets): Promise<BmApiResponse>;
-
     configConfirm(params: BmApiQueryDeliveryConfirm): Promise<BmApiResponse>;
 
     configDefault(params: BmApiQueryDeliveryConfirmDefault): Promise<BmApiResponse>;
 
+    cityStreets(params: BmApiQueryDeliveryStreets): Promise<BmApiResponse>;
+
     deliveryDepartures(params: BmApiQueryDeliveryDepartures): Promise<BmApiResponse>;
 
-    deliveryReceiversAdd(params: BmApiQueryDeliveryReceiversAdd): Promise<BmApiResponse>;
-
     deliveryReceivers(params: BmApiQueryDeliveryReceivers): Promise<BmApiResponse>;
+
+    deliveryReceiversAdd(params: BmApiQueryDeliveryReceiversAdd): Promise<BmApiResponse>;
 
     deliveryCarriers(): Promise<BmApiResponse>;
 
@@ -176,7 +176,9 @@ declare interface BmApiDeliveryMethods {
 
     deliveryConfigs(): Promise<BmApiResponse>;
 
-    createDeliveryConfigs(): Promise<BmApiResponse>;
+    createDeliveryConfigs(params:BmApiQueryDeliveryConfigsCreate ): Promise<BmApiResponse>;
+
+    deliveryDeleteConfig(params:BmApiQueryDeliveryConfigsDelete ): Promise<BmApiResponse>;
 
     deliveryTrack(params: BmApiQueryDeliveryTrack): Promise<BmApiResponse>;
 
@@ -488,6 +490,10 @@ declare interface BmApiQueryFinanceContract {
  * Full documentation:
  * https://developer.bm.parts/api/v2/delivery.html
  */
+
+
+
+
 declare interface BmApiQueryDeliveryContract {
     city: string
     carrier: string
@@ -547,6 +553,20 @@ declare interface BmApiQueryDeliveryDeleteReceiver {
 
 declare interface BmApiQueryDeliveryCarrier {
     carrier_uuid: string
+}
+
+declare interface BmApiQueryDeliveryConfigsCreate{
+    receiver:string;
+    city:string;
+    carrier:string;
+    carrier_warehouse:string;
+    full_insurance?:string;
+    is_default:string;
+    address:string;
+}
+declare interface BmApiQueryDeliveryConfigsDelete{
+    config_uuid:string;
+
 }
 
 /**
@@ -612,7 +632,8 @@ declare interface BmApiResources {
     product: BmApiProductMethods;
     trainings: BmApiTrainingsMethods
     aggregations: BmApiAggregationsMethods;
-    returns: BmApiReturnsMethods
+    returns: BmApiReturnsMethods;
+
 
 
 
