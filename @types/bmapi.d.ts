@@ -11,7 +11,6 @@
 declare var BmApi: (apiToken: string) => BmApiResources;
 
 
-
 /**
  * Response for all methods
  */
@@ -42,32 +41,34 @@ declare interface BmApiProfileMethods {
 }
 
 declare interface BmApiClaimsMethods {
-    types(): Promise<BmApiResponse>;//+++
+    types(): Promise<BmApiResponse>;
 
-    getIssues(): Promise<BmApiResponse>;//+++
+    getIssues(): Promise<BmApiResponse>;
 
-    setIssues(params: BmApiQueryClaimsSet): Promise<BmApiResponse>;//+++
+    setIssues(params: BmApiQueryClaimsSet): Promise<BmApiResponse>;
 
-    attachments(params: BmApiQueryClaimsAttachments): Promise<BmApiResponse>;//+++
+    attachments(params: BmApiQueryClaimsAttachments): Promise<BmApiResponse>;
 
-    claimAttachments(params: BmApiQueryClaimsCurAttachment): Promise<BmApiResponse>;//+++
+    claimAttachments(params: BmApiQueryClaimsCurAttachment): Promise<BmApiResponse>;
 
+//TODO can't test
     addAttachment(params: BmApiQueryClaimsAttachment): Promise<BmApiResponse>;
 
-    getIssueComments(params: BmApiQueryClaimsGetIssueComments): Promise<BmApiResponse>;//+++
+//todo end
+    getIssueComments(params: BmApiQueryClaimsGetIssueComments): Promise<BmApiResponse>;
 
-    setIssueComments(params: BmApiQueryClaimsSetIssueComments): Promise<BmApiResponse>;//+++
+    setIssueComments(params: BmApiQueryClaimsSetIssueComments): Promise<BmApiResponse>;
 }
 
 declare interface BmApiCatalogMethods {
 
-    newArrivals(): Promise<BmApiResponse>;//+++
+    newArrivals(): Promise<BmApiResponse>;
 
-    brands(params: BmApiQueryCatalogBrandsList): Promise<BmApiResponse>;//+++
+    brands(params: BmApiQueryCatalogBrandsList): Promise<BmApiResponse>;
 
-    enginesByModel(params: BmApiQueryCatalogEnginesByModel): Promise<BmApiResponse>;//+
+    enginesByModel(params: BmApiQueryCatalogEnginesByModel): Promise<BmApiResponse>;
 
-    carNodesPath(params: BmApiQueryCatalogCarNodesPath): Promise<BmApiResponse>;//+++
+    carNodesPath(params: BmApiQueryCatalogCarNodesPath): Promise<BmApiResponse>;
 
     carNodes(params: BmApiQueryCatalogCarNodes): Promise<BmApiResponse>;//++
 
@@ -75,251 +76,259 @@ declare interface BmApiCatalogMethods {
 
 declare interface BmApiDocumentsMethods {
 
-    filterGroups(): Promise<BmApiResponse>;//+++
+    filterGroups(): Promise<BmApiResponse>;
 
-    filterTypes(): Promise<BmApiResponse>;//+++
+    filterTypes(): Promise<BmApiResponse>;
 
-    filterDates(): Promise<BmApiResponse>;//+++
+    filterDates(): Promise<BmApiResponse>;
 
-    filterGrouped(params: BmApiQueryDocumentsFilterGrouped): Promise<BmApiResponse>;//+++
+    filterGrouped(params: BmApiQueryDocumentsFilterGrouped): Promise<BmApiResponse>;
 
-    listDocuments(params: BmApiQueryDocumentsList): Promise<BmApiResponse>;//+++
+    listDocuments(params: BmApiQueryDocumentsList): Promise<BmApiResponse>;
 
-    reclamationStatus(params: BmApiQueryDocumentsReclamationStatus): Promise<BmApiResponse>;//+++
+    reclamationStatus(params: BmApiQueryDocumentsReclamationStatus): Promise<BmApiResponse>;
 
-    downloadDocument(params: BmApiQueryDocumentsDownload): Promise<BmApiResponse>;//+++
+    downloadDocument(params: BmApiQueryDocumentsDownload): Promise<BmApiResponse>;
 
-    getDocument(params: BmApiQueryDocument): Promise<BmApiResponse>;//+++
+    getDocument(params: BmApiQueryDocument): Promise<BmApiResponse>;
 }
 
 declare interface BmApiFinanceMethods {
 
-    historyRates(): Promise<BmApiResponse>;//+++
+    historyRates(): Promise<BmApiResponse>;
 
-    currenciesRates(): Promise<BmApiResponse>;//+++
+    currenciesRates(): Promise<BmApiResponse>;
 
-    currenciesList(): Promise<BmApiResponse>;//+++
+    currenciesList(): Promise<BmApiResponse>;
 
-    contractsList(): Promise<BmApiResponse>;//+++
+    contractsList(): Promise<BmApiResponse>;
 
-    contracts(params: BmApiQueryFinanceContract): Promise<BmApiResponse>;//++
+    contracts(params: BmApiQueryFinanceContract): Promise<BmApiResponse>;
 }
 
 declare interface BmApiDeliveryMethods {
 
-    carriersWarehouses(params: BmApiQueryDeliveryContract): Promise<BmApiResponse>;//+++
+    carriersWarehouses(params: BmApiQueryDeliveryContract): Promise<BmApiResponse>;
 
-    carriersCities(params: BmApiQueryDeliveryCities): Promise<BmApiResponse>;//+++
+    carriersCities(params: BmApiQueryDeliveryCities): Promise<BmApiResponse>;
 
-    configConfirm(params: BmApiQueryDeliveryConfirm): Promise<BmApiResponse>;//+++
+    configConfirm(params: BmApiQueryDeliveryConfirm): Promise<BmApiResponse>;
 
-    configDefault(params: BmApiQueryDeliveryConfirmDefault): Promise<BmApiResponse>;//+++
+    configDefault(params: BmApiQueryDeliveryConfirmDefault): Promise<BmApiResponse>;
 
-    cityStreets(params: BmApiQueryDeliveryStreets): Promise<BmApiResponse>;//+++
+    cityStreets(params: BmApiQueryDeliveryStreets): Promise<BmApiResponse>;
 
-    deliveryDepartures(params: BmApiQueryDeliveryDepartures): Promise<BmApiResponse>;//+++
+    deliveryDepartures(params: BmApiQueryDeliveryDepartures): Promise<BmApiResponse>;
 
-    deliveryReceivers(params: BmApiQueryDeliveryReceivers): Promise<BmApiResponse>;//+++
+    deliveryReceivers(params: BmApiQueryDeliveryReceivers): Promise<BmApiResponse>;
 
-    deliveryReceiversAdd(params: BmApiQueryDeliveryReceiversAdd): Promise<BmApiResponse>;//+++
+    deliveryReceiversAdd(params: BmApiQueryDeliveryReceiversAdd): Promise<BmApiResponse>;
 
-    deliveryCarriers(): Promise<BmApiResponse>;//+++
+    deliveryCarriers(): Promise<BmApiResponse>;
 
-    deliveryRegions(): Promise<BmApiResponse>;//+++
+    deliveryRegions(): Promise<BmApiResponse>;
 
-    deliveryConfigs(): Promise<BmApiResponse>;//+++
+    deliveryConfigs(): Promise<BmApiResponse>;
 
-    deliveryCreateConfigs(params: BmApiQueryDeliveryConfigsCreate): Promise<BmApiResponse>;//+++
+    deliveryCreateConfigs(params: BmApiQueryDeliveryConfigsCreate): Promise<BmApiResponse>;
 
     deliveryTrack(params: BmApiQueryDeliveryTrack): Promise<BmApiResponse>;
 
-    deliveryDeleteReceiver(params: BmApiQueryDeliveryDeleteReceiver): Promise<BmApiResponse>;//+++
+    deliveryDeleteReceiver(params: BmApiQueryDeliveryDeleteReceiver): Promise<BmApiResponse>;
 
-    deliveryCarrier(params: BmApiQueryDeliveryCarrier): Promise<BmApiResponse>;//+++
+    deliveryCarrier(params: BmApiQueryDeliveryCarrier): Promise<BmApiResponse>;
 
-    deliveryRegionCities(params: BmApiQueryDeliveryRegionCities): Promise<BmApiResponse>;//+++
+    deliveryRegionCities(params: BmApiQueryDeliveryRegionCities): Promise<BmApiResponse>;
 
-    deliveryDeleteConfig(params: BmApiQueryDeliveryConfigsDelete): Promise<BmApiResponse>;//+++
+    deliveryDeleteConfig(params: BmApiQueryDeliveryConfigsDelete): Promise<BmApiResponse>;
 }
 
 declare interface BmApiShoppingMethods {
-    getReservedProductsDetails(params: BmApiQueryShoppingReserveDetails): Promise<BmApiResponse>;//+++
+    getReservedProductsDetails(params: BmApiQueryShoppingReserveDetails): Promise<BmApiResponse>;
 
 //TODO need more tests
-    downloadUnreservedExcel(): Promise<BmApiResponse>;//+---
+    downloadUnreservedExcel(): Promise<BmApiResponse>;//+--
 //todo end
 
-    getReserveDetails(params: BmApiQueryShoppingGetReserveArray): Promise<BmApiResponse>;//+++
+    getReserveDetails(params: BmApiQueryShoppingGetReserveArray): Promise<BmApiResponse>;
 
-    createReserveProcess(params: BmApiQueryShoppingReserveCreate): Promise<BmApiResponse>;//+++
+    createReserveProcess(params: BmApiQueryShoppingReserveCreate): Promise<BmApiResponse>;
 
-    createUnshipped(params: BmApiQueryShoppingCreateUnshipped): Promise<BmApiResponse>;//+++
+    createUnshipped(params: BmApiQueryShoppingCreateUnshipped): Promise<BmApiResponse>;
 
-    importTemplate(): Promise<BmApiResponse>;//+++
+    importTemplate(): Promise<BmApiResponse>;
 
-    importSettings(): Promise<BmApiResponse>;//+++
+    importSettings(): Promise<BmApiResponse>;
 
-    setImportSettings(params: BmApiQueryShoppingSetImportSettings): Promise<BmApiResponse>;//+++
+    setImportSettings(params: BmApiQueryShoppingSetImportSettings): Promise<BmApiResponse>;
 
-    deleteImportSettings(params: BmApiQueryShoppingDeleteImportSettings): Promise<BmApiResponse>;//+++
+    deleteImportSettings(params: BmApiQueryShoppingDeleteImportSettings): Promise<BmApiResponse>;
 
-    getFileWithErrors(params: BmApiQueryShoppingGetFileWithErrors): Promise<BmApiResponse>;//+++
+    getFileWithErrors(params: BmApiQueryShoppingGetFileWithErrors): Promise<BmApiResponse>;
 
-    tablePreloadFile(params: BmApiQueryShoppingTablePreloadFile): Promise<BmApiResponse>;//+++
+    tablePreloadFile(params: BmApiQueryShoppingTablePreloadFile): Promise<BmApiResponse>;
 
-    tableImportFile(params: BmApiQueryShoppingTableImportFile): Promise<BmApiResponse>;//+++
+    tableImportFile(params: BmApiQueryShoppingTableImportFile): Promise<BmApiResponse>;
 
-    getCartsCount(): Promise<BmApiResponse>;//+++
+    getCartsCount(): Promise<BmApiResponse>;
 
-    cartsUnion(params: BmApiQueryShoppingCartsUnion): Promise<BmApiResponse>;//+++
+    cartsUnion(params: BmApiQueryShoppingCartsUnion): Promise<BmApiResponse>;
 
-    getCartProducts(params: BmApiQueryShoppingGetCartProducts): Promise<BmApiResponse>;//+++
+    getCartProducts(params: BmApiQueryShoppingGetCartProducts): Promise<BmApiResponse>;
 
-    changeCartOwner(params: BmApiQueryShoppingChangeCartOwner): Promise<BmApiResponse>;//+++
+    changeCartOwner(params: BmApiQueryShoppingChangeCartOwner): Promise<BmApiResponse>;
 
-    getReservesList(): Promise<BmApiResponse>;//+++
+    getReservesList(): Promise<BmApiResponse>;
 
-    deleteReserves(params: BmApiQueryShoppingDeleteReserves): Promise<BmApiResponse>;//+++
+    deleteReserves(params: BmApiQueryShoppingDeleteReserves): Promise<BmApiResponse>;
 
-    getCartsList(): Promise<BmApiResponse>;//+++
+    getCartsList(): Promise<BmApiResponse>;
 
-    createCart(params: BmApiQueryShoppingCreateCart): Promise<BmApiResponse>;//+++
+    createCart(params: BmApiQueryShoppingCreateCart): Promise<BmApiResponse>;
 
-    addProductsToCart(params: BmApiQueryShoppingAddProductsToCart): Promise<BmApiResponse>;//+++
+    addProductsToCart(params: BmApiQueryShoppingAddProductsToCart): Promise<BmApiResponse>;
 
-    updateProductsQuantityInCart(params: BmApiQueryShoppingUpdateProductsQuantityInCart): Promise<BmApiResponse>;//+++
+    updateProductsQuantityInCart(params: BmApiQueryShoppingUpdateProductsQuantityInCart): Promise<BmApiResponse>;
 
-    deleteProductFromCart(params: BmApiQueryShoppingDeleteProductFromCart): Promise<BmApiResponse>;//+++
+    deleteProductFromCart(params: BmApiQueryShoppingDeleteProductFromCart): Promise<BmApiResponse>;
 
-    deleteCart(params: BmApiQueryShoppingDeleteCart): Promise<BmApiResponse>;//+++
+    deleteCart(params: BmApiQueryShoppingDeleteCart): Promise<BmApiResponse>;
 
-    getCart(params: BmApiQueryShoppingGetCart): Promise<BmApiResponse>;//+++
+    getCart(params: BmApiQueryShoppingGetCart): Promise<BmApiResponse>;
 }
 
 declare interface BmApiCompanyMethods {
-    managerNotify(params: BmApiQueryCompanyManagerNotify): Promise<BmApiResponse>;//+++
+    managerNotify(params: BmApiQueryCompanyManagerNotify): Promise<BmApiResponse>;
 
-    getContacts(): Promise<BmApiResponse>;//+++
+    getContacts(): Promise<BmApiResponse>;
 
-    getWarehouses(): Promise<BmApiResponse>;//+++
+    getWarehouses(): Promise<BmApiResponse>;
 
-    callBack(): Promise<BmApiResponse>;//+++
+    callBack(): Promise<BmApiResponse>;
 
-    managerInfo(): Promise<BmApiResponse>;//+++
+    managerInfo(): Promise<BmApiResponse>;
 }
 
 declare interface BmApiAggregationsMethods {
-    advertisements(params?: BmApiQueryProducts): Promise<BmApiResponse>;//++
-    brands(params?: BmApiQueryProducts): Promise<BmApiResponse>;//++
-    nodes(params?: BmApiQueryProducts): Promise<BmApiResponse>;//++
-    cars(params?: BmApiQueryProducts): Promise<BmApiResponse>;//++
-    models(params?: BmApiQueryCarModels): Promise<BmApiResponse>;//++
-    engines(params?: BmApiQueryModelEngines): Promise<BmApiResponse>;//++
+    advertisements(params?: BmApiQueryProducts): Promise<BmApiResponse>;
+
+    brands(params?: BmApiQueryProducts): Promise<BmApiResponse>;
+
+    nodes(params?: BmApiQueryProducts): Promise<BmApiResponse>;
+
+    cars(params?: BmApiQueryProducts): Promise<BmApiResponse>;
+
+    models(params?: BmApiQueryCarModels): Promise<BmApiResponse>;
+
+    engines(params?: BmApiQueryModelEngines): Promise<BmApiResponse>;
 }
 
 declare interface BmApiSearchMethods {
-    history(): Promise<BmApiResponse>;//+++
+    history(): Promise<BmApiResponse>;
 
-    suggestProducts(params?: BmApiQuerySuggestProducts): Promise<BmApiResponse>;//+++
+    suggestProducts(params?: BmApiQuerySuggestProducts): Promise<BmApiResponse>;
 
-    searchSuggests(params?: BmApiQuerySearchSuggests): Promise<BmApiResponse>;//+++
+    searchSuggests(params?: BmApiQuerySearchSuggests): Promise<BmApiResponse>;
 
-    products(params?: BmApiQueryProducts): Promise<BmApiResponse>;//+++
+    products(params?: BmApiQueryProducts): Promise<BmApiResponse>;
 
 }
 
 declare interface BmApiNewsMethods {
 
-    list(params: BmApiQueryNewsList): Promise<BmApiResponse>;//+++
+    list(params: BmApiQueryNewsList): Promise<BmApiResponse>;
 
-    article(params: BmApiQueryNewsArticle): Promise<BmApiResponse>;//+++
+    article(params: BmApiQueryNewsArticle): Promise<BmApiResponse>;
 }
 
 declare interface BmApiReportsMethods {
 
-    brandsTurnover(params: BmApiQueryReportsBrandsTurnover): Promise<BmApiResponse>;//+++
+    brandsTurnover(params: BmApiQueryReportsBrandsTurnover): Promise<BmApiResponse>;
 
-    reconciliation(params: BmApiQueryReportsReconciliation): Promise<BmApiResponse>;//+++
+    reconciliation(params: BmApiQueryReportsReconciliation): Promise<BmApiResponse>;
 
-    terms(params: BmApiQueryReportsTerms): Promise<BmApiResponse>;//+++
+    terms(params: BmApiQueryReportsTerms): Promise<BmApiResponse>;
 
-    reconciliationFile(params: BmApiQueryReportsReconciliationFile): Promise<BmApiResponse>;//+++
+    reconciliationFile(params: BmApiQueryReportsReconciliationFile): Promise<BmApiResponse>;
 }
 
 declare interface BmApiProcessingMethods {
-    reserveProcess(params: BmApiQueryReserveProcess): Promise<BmApiResponse>;//++
+    reserveProcess(params: BmApiQueryReserveProcess): Promise<BmApiResponse>;//+++
 
     getDepartures(params: BmApiQueryGetDepartures): Promise<BmApiResponse>;
 
-    processSync(params: BmApiQueryProcessSync): Promise<BmApiResponse>;//+++
+    processSync(params: BmApiQueryProcessSync): Promise<BmApiResponse>;
+
 //TODO can't check
     downloadUnshipped(params: BmApiQueryDownloadUnshipped): Promise<BmApiResponse>;
 
 //todo end
 
-    cartPreCheck(params: BmApiQueryCartPreCheck): Promise<BmApiResponse>;//+++
+    cartPreCheck(params: BmApiQueryCartPreCheck): Promise<BmApiResponse>;
 
-    checkShipmentStatus(params: BmApiQueryCheckShipmentStatus): Promise<BmApiResponse>;//+++
+    checkShipmentStatus(params: BmApiQueryCheckShipmentStatus): Promise<BmApiResponse>;
 
 }
 
 declare interface BmApiReturnsMethods {
-    returnsList(): Promise<BmApiResponse>//+++
+    returnsList(): Promise<BmApiResponse>
+
 //TODO need more info
     returnsRequestCreate(params: BmApiQueryReturnsRequest): Promise<BmApiResponse>
 
 //todo end
-    returnsCauses(): Promise<BmApiResponse>//+++
 
-    returnsNotify(params: BmApiQueryReturnsNotify): Promise<BmApiResponse>//+++
+    returnsCauses(): Promise<BmApiResponse>
+
+    returnsNotify(params: BmApiQueryReturnsNotify): Promise<BmApiResponse>
 }
 
 declare interface BmApiAdvertisingMethods {
-    bannerRandom(params: BmApiQueryAdvertisingBannerRandomList): Promise<BmApiResponse>;//+++
+    bannerRandom(params: BmApiQueryAdvertisingBannerRandomList): Promise<BmApiResponse>;
 
-    bannersList(params: BmApiQueryAdvertisingBannersList): Promise<BmApiResponse>;//+++
+    bannersList(params: BmApiQueryAdvertisingBannersList): Promise<BmApiResponse>;
 
-    listAdvertisings(params: BmApiQueryAdvertisingList): Promise<BmApiResponse>;//+++
+    listAdvertisings(params: BmApiQueryAdvertisingList): Promise<BmApiResponse>;
 
-    progress(params: BmApiQueryAdvertisingProgress): Promise<BmApiResponse>;//+++
+    progress(params: BmApiQueryAdvertisingProgress): Promise<BmApiResponse>;
 
-    promo(params: BmApiQueryAdvertisingPromo): Promise<BmApiResponse>;//+++
+    promo(params: BmApiQueryAdvertisingPromo): Promise<BmApiResponse>;
 }
 
 declare interface BmApiProductMethods {
-    inWaiting(params?: BmApiQueryProductInWaiting): Promise<BmApiResponse>;//+++
+    inWaiting(params?: BmApiQueryProductInWaiting): Promise<BmApiResponse>;
 
-    inStocks(params?: BmApiQueryProductInStocks): Promise<BmApiResponse>;//+++
+    inStocks(params?: BmApiQueryProductInStocks): Promise<BmApiResponse>;
 
-    prices(params?: BmApiQueryProductPrices): Promise<BmApiResponse>;//+++
+    prices(params?: BmApiQueryProductPrices): Promise<BmApiResponse>;
 
-    curPrice(params?: BmApiQueryProductPrice): Promise<BmApiResponse>;//+++
+    curPrice(params?: BmApiQueryProductPrice): Promise<BmApiResponse>;
 
-    details(params?: BmApiQueryProductDetails): Promise<BmApiResponse>;//+++
+    details(params?: BmApiQueryProductDetails): Promise<BmApiResponse>;
 }
 
 
 declare interface BmApiTrainingsMethods {
 
-    registerForTraining(params: BmApiQueryTrainingRegister): Promise<BmApiResponse>//+++
+    registerForTraining(params: BmApiQueryTrainingRegister): Promise<BmApiResponse>
 
-    getTrainingsList(params: BmApiQueryTrainingsList): Promise<BmApiResponse>//+++
+    getTrainingsList(params: BmApiQueryTrainingsList): Promise<BmApiResponse>
 
-    trainingToCalendar(params: BmApiQueryTrainingToCalendar): Promise<BmApiResponse>//+++
+    trainingToCalendar(params: BmApiQueryTrainingToCalendar): Promise<BmApiResponse>
 
-    getTraining(params: BmApiQueryTraining): Promise<BmApiResponse>//+++
+    getTraining(params: BmApiQueryTraining): Promise<BmApiResponse>
 }
 
 declare interface BmApiGarageMethods {
-    carsList(): Promise<BmApiResponse>//+++
+    carsList(): Promise<BmApiResponse>
 
-    addCar(params: BmApiQueryGarageAddCar): Promise<BmApiResponse>//+++
+    addCar(params: BmApiQueryGarageAddCar): Promise<BmApiResponse>
 
-    carInfo(params: BmApiQueryGarageCarInfo): Promise<BmApiResponse>//+++
+    carInfo(params: BmApiQueryGarageCarInfo): Promise<BmApiResponse>
 
-    updateCar(params: BmApiQueryGarageUpdateCar): Promise<BmApiResponse>//+++
+    updateCar(params: BmApiQueryGarageUpdateCar): Promise<BmApiResponse>
 
-    deleteCar(params: BmApiQueryGarageDeleteCar): Promise<BmApiResponse>//+++
+    deleteCar(params: BmApiQueryGarageDeleteCar): Promise<BmApiResponse>
 }
 
 
@@ -653,7 +662,6 @@ declare interface BmApiQueryShoppingGetCart {
 declare interface BmApiQueryCompanyManagerNotify {
     text: string;
 }
-
 
 
 /**
