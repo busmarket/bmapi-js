@@ -253,7 +253,7 @@ declare interface BmApiReportsMethods {
 }
 
 declare interface BmApiProcessingMethods {
-    reserveProcess(params: BmApiQueryReserveProcess): Promise<BmApiResponse>;//+++
+    reserveProcess(params: BmApiQueryReserveProcess): Promise<BmApiResponse>;
 
     getDepartures(params: BmApiQueryGetDepartures): Promise<BmApiResponse>;
 
