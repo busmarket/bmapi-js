@@ -9,9 +9,9 @@
   "homepage": "https://github.com/busmarket/bmapi",
   "scripts": {
     "tsc": "tsc",
-    "build:node": "webpack --config webpack.config.js --mode production",
-    "build:cdn": "yarn build:node --env.target='node'",
-    "build": "yarn build:node && yarn build:cdn"
+    "build:cdn": "webpack --config webpack.config.js --mode production",
+    "build:node": "yarn build:cdn --env.target='node'",
+    "build": "yarn build:cdn && yarn build:node"
   },
   "repository": {
     "type": "git",
