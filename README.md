@@ -4,30 +4,28 @@
 
 
 ```
-⚠ UNDER CONSTRUCTION ⚠
-This is a short version of the library BusMarket API JS client.
+⚠ You can find a full list of examples [here](https://developer.bm.parts/).
+https://developer.bm.parts/
 ```
-For a comprehensive list of examples, 
-check out the [API documentation](https://developer.bm.parts/).
 
 
 ### Installation
 
-~~npm install bmapi --save~~
+npm i @busmarket/bmapi-js
 
 ### Overview
 
 Every resource is accessed via your BmApi instance:
 
 ```js
-const BmApi = require('bmapi');
+const BmApi = require('@busmarket/bmapi-js');
 const myBmApi = new BmApi('<your_token>');
 ```
 
 Using TypeScript:
 
 ```typescript
-import BmApi = require("bmapi");
+import BmApi = require("@busmarket/bmapi-js");
 const myBmApi = BmApi('<your_token>');
 ```
 
@@ -36,7 +34,7 @@ Every resource method returns a promise.
 For example, let's get list of products:
 
 ```js
-const BmApi = require('bmapi');
+const BmApi = require('@busmarket/bmapi-js');
 const myBmApi = new BmApi('<your_token>');
 (async() => {
   const response = await myBmApi.search.products({q: '115906'});
