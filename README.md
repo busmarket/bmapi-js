@@ -3,19 +3,18 @@
 # BusMarket API JS client
 
 
-```
-⚠ You can find a full list of examples [here](https://developer.bm.parts/).
-https://developer.bm.parts/
-```
-
-
 ### Installation
 
 npm i @busmarket/bmapi-js
 
+```
+⚠ You can find a full list of examples here.
+https://developer.bm.parts/
+```
+
 ### Overview
 
-Every resource is accessed via your BmApi instance:
+Using JavaScript:
 
 ```js
 const BmApi = require('@busmarket/bmapi-js');
@@ -54,7 +53,7 @@ Also, you can use CDN. Following code bellow:
     <title>Document</title>
 </head>
 <body>
-    <script src="node_modules/bmapi/dist/cdn.bmapi.js"></script>
+    <script src="node_modules/@busmarket/bmapi-js/dist/cdn.bmapi.js"></script>
     <script>
       const MyBmApi = new BmApi(`<YOUR_BMAPI_TOKEN>`);
       ( async function() {
