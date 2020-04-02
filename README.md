@@ -4,11 +4,12 @@
 
 
 ### Installation
-
+```
 npm i @busmarket/bmapi-js
+```
 
 ```
-⚠ You can find a full list of examples here.
+You can find a full list of examples here.
 https://developer.bm.parts/
 ```
 
