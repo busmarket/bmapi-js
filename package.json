@@ -1,5 +1,5 @@
 {
-  "name": "bmapi-js",
+  "name": "@busmarket/bmapi-js",
   "version": "1.0.0",
   "description": "BmApiJS | BusMarket API JS client",
   "main": "dist/bmapi.js",
@@ -15,10 +15,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/busmarket/bmapi-js.git"
+    "url": "git+https://github.com/busmarket/bmapi-js.git"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/"
+    "registry": "https://npm.pkg.github.com/"
   },
   "keywords": [
     "api",
@@ -42,5 +42,12 @@
     "uglify-js": "^3.5.5",
     "webpack": "^4.30.0",
     "webpack-cli": "^3.3.1"
+  },
+  "bugs": {
+    "url": "https://github.com/busmarket/bmapi-js/issues"
+  },
+  "directories": {
+    "example": "example",
+    "lib": "lib"
   }
 }
