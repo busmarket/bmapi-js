@@ -9,3 +9,7 @@ node_modules/
 /*.pem
 /*.log
 /*.lock
+/example/javascript/app.js
+example/javascript/app.js
+/example/typescript/app.ts
+example/typescript/app.ts

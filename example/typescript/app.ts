@@ -16,8 +16,8 @@ const myBmApi = BmApi(`${Authorization}`);
    * ### Get AGGREGATION
    * @type {BmApiResponse}
    */
-  // const aggregations = await myBmApi.aggregations.brands({q: '115906'});
-  // console.info(aggregations.data);
+  const aggregations = await myBmApi.aggregations.brands({q: '115906'});
+  console.info(aggregations.data);
 
   /**
    * ### Get SUGGESTS
