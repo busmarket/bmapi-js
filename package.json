@@ -1,7 +1,7 @@
 {
-  "name": "bmapi",
+  "name": "bmapi-js",
   "version": "1.0.0",
-  "description": "BmAPI | BusMarket API JS client",
+  "description": "BmApiJS | BusMarket API JS client",
   "main": "dist/bmapi.js",
   "types": "@types/bmapi.d.ts",
   "author": "Andrew Rymaruk",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/busmarket/bmapi.git"
+    "url": "https://github.com/busmarket/bmapi-js.git"
   },
   "keywords": [
     "api",
