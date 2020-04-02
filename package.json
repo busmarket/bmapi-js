@@ -1,6 +1,6 @@
 {
   "name": "@busmarket/bmapi-js",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "BmApiJS | BusMarket API JS client",
   "main": "dist/bmapi.js",
   "types": "@types/bmapi.d.ts",
